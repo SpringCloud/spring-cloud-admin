@@ -30,3 +30,5 @@ css
 /*/target
 target
 
+/spring-cloud-admin-ui/node_modules/*
+
