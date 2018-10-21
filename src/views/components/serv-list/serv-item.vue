@@ -5,7 +5,7 @@
     <img src="http://spring.io/img/homepage/icon-spring-framework.svg" class="img mr10">
     <div>
       <h4>SPRING-BOOT-ADMIN</h4>
-      <p class="sm grey">xubin02 - Arch</p>
+      <p class="sm grey">xujin - Arch</p>
     </div>
   </header>
   <div class="mb10 clear">
