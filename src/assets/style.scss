@@ -19,3 +19,16 @@ body{
   flex-grow: 1;
   overflow: auto;
 }
+.admin-table{
+  border-spacing: 0;
+  width: 100%;
+  text-align: left;
+  th{
+    padding: 8px 10px;
+    border-bottom: 1px solid #e4e7ed;
+  }
+  th, td{
+    padding: 8px 10px;
+    border-bottom: 1px solid #e4e7ed;
+  }
+}

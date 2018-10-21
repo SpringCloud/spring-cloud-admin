@@ -1,5 +1,6 @@
 <template>
   <div class="micro-topo" >
+    <slot/>
     <div class="micro-topo-container" ref="topo"></div>
   </div>
 </template>
@@ -46,6 +47,9 @@ export default {
   props: {
     height: {
       default: 400,
+    },
+    deviation: {
+      default: 0,
     },
     datas: {
       type: Object,
@@ -138,7 +142,7 @@ export default {
     this.svg = d3
       .select(this.$refs.topo)
       .append('svg')
-      .attr('width', this.width)
+      .attr('width', this.width-15)
       .attr('height', this.height);
       this.draw();
   },
@@ -155,7 +159,7 @@ export default {
         .force('xPos', d3.forceX().strength(1))
         .force('charge', d3.forceManyBody().strength(-500))
         .force( 'link', d3.forceLink(this.datas.calls).id(d => d.id))
-        .force('center', d3.forceCenter(this.width / 2, this.height / 2))
+        .force('center', d3.forceCenter((this.width - this.deviation) / 2, this.height / 2))
         .on('tick', this.tick)
         .stop();
       this.graph = this.svg.append('g').attr('class', 'graph');
@@ -271,7 +275,7 @@ export default {
       });
     },
     resize() {
-      this.svg.attr('width', this.$refs.topo.offsetWidth);
+      this.svg.attr('width', this.$refs.topo.offsetWidth -15);
       this.svg.attr('height', this.height);
     },
     tick() {
@@ -329,10 +333,22 @@ export default {
 };
 </script>
 <style lang="scss">
+.topology-board{
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  width: 300px;
+  color: #e3e3e3;
+}
+.topology-board-item{
+  border-radius: 6px;
+  background-color: rgba(72,78,85,.6);
+  box-shadow: 0 3px 10px -2px rgba(0,0,0,.1);
+  padding: 10px 15px 5px;
+  margin-bottom: 20px;
+}
 .micro-topo {
-  svg {
-    display: block;
-  }
+  position: relative;
   .micro-topo-container {
     text-align: center;
     border-radius: 4px;
