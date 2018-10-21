@@ -1,0 +1,21 @@
+div,header,footer,nav,article,section,aside,label,input,textarea,select,button,ul,ol,li,h1,h2,h3,h4,h5,a,img{
+  box-sizing: border-box;
+}
+html, body, #app{
+  height: 100%;
+}
+body{
+  font-size: 13px;
+  background-color: #F0F2F5;
+}
+#app {
+  display: flex;
+}
+.container{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.wrapper{
+  flex-grow: 1;
+  overflow: auto;
+}
