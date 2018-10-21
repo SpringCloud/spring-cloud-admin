@@ -32,3 +32,5 @@ target
 
 /spring-cloud-admin-ui/node_modules/*
 
+### VsCode ###
+.vscode
