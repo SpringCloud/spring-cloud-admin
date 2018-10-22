@@ -15,4 +15,5 @@ export default new Vuex.Store({
 });
 
 export interface State {
+  global: GlobalState;
 }

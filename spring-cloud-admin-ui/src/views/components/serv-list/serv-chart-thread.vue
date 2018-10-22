@@ -39,19 +39,19 @@ export default class Heap extends Vue {
           type: 'line',
           symbol: 'none',
           // smooth: 'true',
-          // areaStyle: {
-          //   color: {
-          //     x: 0,
-          //     y: 0,
-          //     x2: 0,
-          //     y2: 1,
-          //     colorStops: [{
-          //       offset: 0, color: '#f7b32b',
-          //     }, {
-          //       offset: 0.8, color: '#fff',
-          //     }],
-          //   },
-          // },
+          areaStyle: {
+            color: {
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [{
+                offset: 0, color: '#f7b32b',
+              }, {
+                offset: 0.8, color: '#fff',
+              }],
+            },
+          },
         },
       ],
     };

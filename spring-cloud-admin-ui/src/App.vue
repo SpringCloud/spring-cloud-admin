@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <AdminMenu/>
-    <div style="display: flex;flex-direction: column;flex-grow:1;">
-      <AdminHeader/>
+    <AdminHeader/>
+    <AdminRouter/>
+    <div style="display: flex;flex-grow:1;">
+      <AdminMenu/>
       <router-view class="wrapper"/>
     </div>
   </div>
@@ -20,4 +21,7 @@ export default class App extends Vue {
 <style lang='scss'>
 @import './assets/lib.scss';
 @import './assets/style.scss';
+#app{
+  flex-direction: column;
+}
 </style>

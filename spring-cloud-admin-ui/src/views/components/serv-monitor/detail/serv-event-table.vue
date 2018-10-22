@@ -1,6 +1,5 @@
 <template>
-<div class="serv-event-table">
-  <div class="title grey">Event 信息</div>
+ <admin-panel title="Event 信息">
   <table class="admin-table">
     <!-- <thead>
       <tr><th></th><th></th><th></th></tr>
@@ -17,7 +16,7 @@
       </tr>
     </tbody>
   </table>
-</div>
+</admin-panel>
 </template>
 
 <script lang="ts">
@@ -31,9 +30,4 @@ export default class ServItem extends Vue {
 </script>
 
 <style lang="scss">
-.serv-event-table{
-  .title{
-    padding: 4px 10px;
-  }
-}
 </style>

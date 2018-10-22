@@ -6,7 +6,7 @@ html, body, #app{
 }
 body{
   font-size: 13px;
-  background-color: #F0F2F5;
+  // background-color: #F0F2F5;
 }
 #app {
   display: flex;
@@ -31,4 +31,11 @@ body{
     padding: 8px 10px;
     border-bottom: 1px solid #e4e7ed;
   }
+}
+.ivu-btn:hover{
+  color: #19be6b;
+  border-color: #19be6b;
+}
+a{
+  color: #19be6b;
 }

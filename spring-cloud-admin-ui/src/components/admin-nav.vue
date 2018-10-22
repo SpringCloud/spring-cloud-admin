@@ -1,47 +1,30 @@
 <template>
   <nav class="admin-nav">
-    <router-link class="admin-nav-i" to="/">详情</router-link>
-    <router-link class="admin-nav-i" to="/service">日志</router-link>
-    <router-link class="admin-nav-i" to="/service">监控指数</router-link>
-    <router-link class="admin-nav-i" to="/service">环境配置</router-link>
-    <router-link class="admin-nav-i" to="/service">日志级别</router-link>
-    <router-link class="admin-nav-i" to="/service">JMX</router-link>
-    <router-link class="admin-nav-i" to="/service">JVM</router-link>
-    <router-link class="admin-nav-i" to="/service">文档</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}`" exact>详情</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/log`">日志</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/point`">监控指数</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/env`">环境配置</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/logback`">日志级别</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/jmx`">JMX</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/jvm`">JVM</router-link>
+    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/swagger`">文档</router-link>
   </nav>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component, Prop, Model } from 'vue-property-decorator';
+import { Component } from 'vue-property-decorator';
 
 @Component({})
 export default class Nav extends Vue {
-  @Prop()
-  @Model('input', { type: String }) test: String;
-  changed(ev) {
-    this.$emit('input', ev.target.value);
-  }
-
-  @Prop({
-    type: String,
-    default: 'OK',
-  }) name: String;
-
-  message: String = 'Name';
-
-  say(): String {
-    return this.message;
-  }
 }
 </script>
 
 <style lang="scss" scoped>
 .admin-nav{
   border-bottom:1px solid rgba(0,0,0,.05);
-  box-shadow: 0 1px 1px rgba(0,0,0,.08);
   height: 45px;
-  background-color: #fff;
+  background-color: #f6f7fb;
   padding: 0 30px;
 }
 .admin-nav-i{
@@ -64,9 +47,11 @@ export default class Nav extends Vue {
       transition: background-color .3s;
   }
   &:hover, &.active{
-    color: #3880ff;
+    // color: #3880ff;
+    color: #19be6b;
     &:after{
-      background-color: #3880ff;
+      background-color: #19be6b;
+      // background-color: #3880ff;
     }
   }
 }

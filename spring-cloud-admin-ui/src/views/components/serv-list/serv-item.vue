@@ -1,11 +1,11 @@
 <template>
 <div class="serv-list-i">
-  <p class="sm grey mb5">10.224.18.11:8070<a @click="$router.push('/services/123')" class="r">详情</a></p>
+  <p class="sm grey mb5">10.224.18.11:8070</p>
   <header class="serv-list-i-header mb10">
     <img src="http://spring.io/img/homepage/icon-spring-framework.svg" class="img mr10">
     <div>
-      <h4>SPRING-BOOT-ADMIN</h4>
-      <p class="sm grey">xujin - Arch</p>
+      <h4><span class="cp" @click="$router.push('/services/123')">SPRING-BOOT-ADMIN</span></h4>
+      <p class="sm grey ell">xubin02 - Arch</p>
     </div>
   </header>
   <div class="mb10 clear">
@@ -60,13 +60,10 @@ export default class ServItem extends Vue {
   width: 100%;
   padding: 20px 20px 5px;
   background: #fff;
-  box-shadow: 0 2px 9px 0 rgba(0,0,0,0.02);
+  border: 1px solid #e4e7ed;
   border-radius: 4px;
   margin-bottom: 15px;
   transition: box-shadow .3s;
-  &:hover{
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2);
-  }
 }
 .serv-list-i-header{
   display: flex;

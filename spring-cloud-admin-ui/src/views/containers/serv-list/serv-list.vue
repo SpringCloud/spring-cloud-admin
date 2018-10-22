@@ -2,13 +2,13 @@
 <div class="container pt20">
   <header class="clear mb20">
     <div class="l">
-      <h1 class="n"><span class="mr15">服务列表</span><Button ghost type="primary" shape="circle" size="small" icon="md-add">添加应用</Button></h1>
+      <h1 class="n"><span class="mr15">服务列表</span><Button type="dashed" shape="circle" size="small" icon="md-add">添加应用</Button></h1>
       <p class="grey">我是描述我是描述我是描述我是描述我是描述</p>
     </div>
     <div class="r">
       <div class="serv-list-btn-group ivu-btn-group ivu-btn-group-default">
-        <Button>收藏</Button>
-        <Button type="text" ghost>全部</Button>
+        <Button size="small">收藏</Button>
+        <Button size="small" type="text" ghost>全部</Button>
       </div>
     </div>
   </header>
@@ -42,7 +42,7 @@ export default class ServList extends Vue {
 .serv-list-btn-group{
   margin-top: 20px;
   background-color: #dcdee2;
-  padding: 3px;
+  padding: 2px;
   border-radius: 4px;
 }
 </style>

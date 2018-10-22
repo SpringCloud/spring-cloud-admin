@@ -51,6 +51,9 @@ export default {
     deviation: {
       default: 0,
     },
+    zoomRate: {
+      default: 1,
+    },
     datas: {
       type: Object,
       default() {
@@ -142,7 +145,7 @@ export default {
     this.svg = d3
       .select(this.$refs.topo)
       .append('svg')
-      .attr('width', this.width-15)
+      .attr('width', this.width)
       .attr('height', this.height);
       this.draw();
   },
@@ -162,7 +165,11 @@ export default {
         .force('center', d3.forceCenter((this.width - this.deviation) / 2, this.height / 2))
         .on('tick', this.tick)
         .stop();
-      this.graph = this.svg.append('g').attr('class', 'graph');
+      this.graph = this.svg.append('g').attr('class', 'graph').attr(
+      'transform',
+      `translate(${(this.width - this.deviation) / 8},${70*this.zoomRate})scale(${
+        this.zoomRate
+      })`);
       this.svg.call(this.getZoomBehavior(this.graph));
       this.svg.on('click', (d, i) => {
         this.$emit('setCurrentApp', {name: '', id: ''});
@@ -275,7 +282,7 @@ export default {
       });
     },
     resize() {
-      this.svg.attr('width', this.$refs.topo.offsetWidth -15);
+      this.svg.attr('width', this.$refs.topo.offsetWidth);
       this.svg.attr('height', this.height);
     },
     tick() {
@@ -303,8 +310,8 @@ export default {
         .on('zoom', () => {
           g.attr(
             'transform',
-            `translate(${d3.event.transform.x},${d3.event.transform.y})scale(${
-              d3.event.transform.k
+            `translate(${((this.width - this.deviation) / 8)+d3.event.transform.x},${70*this.zoomRate+d3.event.transform.y})scale(${
+              d3.event.transform.k * this.zoomRate
             })`
           );
         });

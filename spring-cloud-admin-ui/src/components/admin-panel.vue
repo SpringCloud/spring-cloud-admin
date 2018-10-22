@@ -1,7 +1,7 @@
 <template>
-  <div class="rk-box" :style="width?`width: ${width};`:''">
-    <div class="rk-box-title">{{title}}</div>
-    <div class="rk-box-container"><slot></slot></div>
+  <div class="admin-box" :style="width?`width: ${width};`:''">
+    <div class="admin-box-title">{{title}}</div>
+    <div :style="`padding:${padding}`"><slot></slot></div>
   </div>
 </template>
 
@@ -10,8 +10,12 @@ import Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
 
 @Component({})
-export default class RkPanel extends Vue {
+export default class AdminPanel extends Vue {
   @Prop() title: String;
+  @Prop({
+    type: String,
+    default: '10px 12px',
+  }) padding: String;
   @Prop({
     type: String,
     default: '',
@@ -19,16 +23,13 @@ export default class RkPanel extends Vue {
 }
 </script>
 <style lang="scss" scoped>
-.rk-box{
+.admin-box{
   width: 100%;
 }
-.rk-box-title{
+.admin-box-title{
   padding: 4px 12px;
   border-radius: 4px;
-  background-color: rgba(240, 242, 245, 0.5);
+  background-color: #f6f7fb;
   color: rgba(10, 10, 10, .6);
-}
-.rk-box-container{
-  padding:10px 0;
 }
 </style>

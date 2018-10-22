@@ -5,7 +5,8 @@ export const CLEAR_EVENTS = 'CLEAR_EVENTS';
 export const RUN_EVENTS = 'RUN_EVENTS';
 export const SET_CHARTS = 'SET_CHARTS';
 export const CLEAR_CHARTS = 'CLEAR_CHARTS';
-
+export const SET_ROUTER = 'SET_ROUTER';
+export const DELETE_ROUTER = 'DELETE_ROUTER';
 // dashboard
 export const SET_APPLICATIONS = 'SET_APPLICATIONS';
 export const SET_SERVICES = 'SET_SERVICES';
