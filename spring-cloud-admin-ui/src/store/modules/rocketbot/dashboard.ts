@@ -1,6 +1,6 @@
 import { Commit, ActionTree } from 'vuex';
 import { getServiceInfo, getApplicationInfo, getServerInfo, getServerDetail } from '@/api/rocketbot/dashboard';
-import * as types from '../mutation-types';
+import * as types from '@/store/mutation-types';
 
 interface SlowTrace {
   key: String;

@@ -2,7 +2,7 @@ import axios, { AxiosPromise } from 'axios';
 import { Duration } from '@/store/interfaces/options';
 import dateCook from '@/utils/dateCook';
 /* eslint-disable */
-const tag = '/api';
+const tag = '/sw';
 
 // 获取拓扑图
 const getTopoGq = (duration: Duration) => (

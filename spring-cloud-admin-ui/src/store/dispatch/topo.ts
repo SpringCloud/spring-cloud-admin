@@ -1,5 +1,5 @@
 import store from '../index';
-import { Option } from '@/store/modules/options.ts';
+import { Option } from '@/store/modules/rocketbot/options';
 
 export const getTopo = (): void => {
   if (store.state.topo.current.key === 'default') {

@@ -1,7 +1,7 @@
 import axios, { AxiosPromise } from 'axios';
 import dateCook from '@/utils/dateCook';
 /* eslint-disable */
-const tag = '/api';
+const tag = '/sw';
 
 export const getTraces = (params): AxiosPromise<any> =>
   axios.post(`${tag}/trace`, {

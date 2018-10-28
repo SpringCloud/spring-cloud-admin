@@ -1,9 +1,9 @@
 import axios, { AxiosPromise } from 'axios';
-import { Option } from '@/store/modules/options.ts';
+import { Option } from '@/store/modules/rocketbot/options';
 import { Duration } from '@/store/interfaces/options';
 import dateCook from '@/utils/dateCook';
 
-const tag = '/api';
+const tag = '/sw';
 
 // 获取服务器详细信息
 const getServerDetailGq = (duration: Duration, serverId:String) => (

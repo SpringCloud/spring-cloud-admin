@@ -1,6 +1,6 @@
 import { Commit, ActionTree } from 'vuex';
 import { getAlarm } from '@/api/rocketbot/alarm';
-import * as types from '../mutation-types';
+import * as types from '@/store/mutation-types';
 
 export interface AlarmParams {
   paging:Number;

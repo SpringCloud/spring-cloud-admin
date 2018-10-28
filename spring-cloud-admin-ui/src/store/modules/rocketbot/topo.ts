@@ -1,6 +1,6 @@
 import { Commit, ActionTree } from 'vuex';
 import { getTopo, getTopoApp, getClusterBrief } from '@/api/rocketbot/topo';
-import * as types from '../mutation-types';
+import * as types from '@/store/mutation-types';
 interface Option {
   key: String;
   label: String;

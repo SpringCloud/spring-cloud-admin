@@ -17,6 +17,7 @@ export default class Heap extends Vue {
       tooltip: {
         trigger: 'axis',
       },
+      animation: false,
       grid: {
         top: 5,
         left: -10,

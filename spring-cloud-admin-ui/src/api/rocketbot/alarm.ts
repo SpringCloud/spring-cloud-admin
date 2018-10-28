@@ -3,7 +3,7 @@ import { Duration } from '@/store/interfaces/options';
 import dateCook from '@/utils/dateCook';
 
 /* eslint-disable */
-const tag = '/api';
+const tag = '/sw';
 
 // 获取告警
 const getAlarmGq = (duration: Duration, paging:Number, type:String) => (

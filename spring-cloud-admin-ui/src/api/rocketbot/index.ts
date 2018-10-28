@@ -1,7 +1,7 @@
 import axios, { AxiosPromise } from 'axios';
 import { Duration } from '@/store/interfaces/options';
 import dateCook from '@/utils/dateCook';
-const tag = '/api';
+const tag = '/sw';
 
 // 获取应用
 const getAppsGq = (duration: Duration) => (

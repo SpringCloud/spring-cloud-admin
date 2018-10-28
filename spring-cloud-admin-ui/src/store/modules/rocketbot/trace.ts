@@ -1,6 +1,6 @@
 import { Commit, ActionTree } from 'vuex';
 import { getTraces, getTraceSpans } from '@/api/rocketbot/trace.ts';
-import * as types from '../mutation-types';
+import * as types from '@/store/mutation-types';
 
 export interface Trace {
   duration: Number;

@@ -1,5 +1,5 @@
 import store from '../index';
-import { Option, Server } from '@/store/modules/options.ts';
+import { Option, Server } from '@/store/modules/rocketbot/options';
 // export const appChange = (products: CartProduct[]) => {
 //   return store.dispatch('checkout', products)
 // }

@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { State } from '@/store/modules/options.ts';
+import { State } from '@/store/modules/rocketbot/options.ts';
 import { Component, Prop } from 'vue-property-decorator';
 import RkToolDashboard from '@/components/rk-tool-dashboard.vue';
 import { serviceChange, serverChange } from '@/store/dispatch/dashboard.ts';
