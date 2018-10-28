@@ -2,7 +2,7 @@
   <div id="app">
     <AdminHeader/>
     <AdminRouter/>
-    <div style="display: flex;flex-grow:1;">
+    <div style="display: flex;flex-grow:1;height: 100%;">
       <AdminMenu/>
       <router-view class="wrapper"/>
     </div>

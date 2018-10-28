@@ -4,6 +4,13 @@
       <img src="https://springcloud.cc/images/favicon.png" class="logo mr10">
       <span class="logo-title">Spring Cloud Admin</span>
     </div>
+     <nav>
+      <router-link class="admin-nav-link" to="/" exact>仪表盘</router-link>
+      <router-link class="admin-nav-link" to="/services">服务治理</router-link>
+      <router-link class="admin-nav-link" to="/trace">全链路监控</router-link>
+      <router-link class="admin-nav-link" to="/alarm">中台管理</router-link>
+      <router-link class="admin-nav-link" to="/alarm">系统配置</router-link>
+    </nav>
     <div class="admin-header-end">
       <span class="mr15">当前环境: test</span>
       <Icon type="md-information-circle" size="16" class="mr15"/>
@@ -40,7 +47,7 @@ export default class AdminHeader extends Vue {
   height: 50px;
   background-color: #252a2f;
   color: #e8e8e8;
-  padding: 5px 30px 5px 10px;
+  padding: 5px 30px 5px 15px;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0,0,0,.08);
   .logo{
@@ -63,6 +70,20 @@ export default class AdminHeader extends Vue {
     margin-right: 8px;
     background-position: center;
     background-size: cover;
+  }
+}
+.admin-nav-link{
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: #e8e8e8;
+  opacity: .7;
+  will-change: opacity, background-color;
+  transition: opacity .3s, background-color .3s;
+  &:hover,&.active{
+    opacity: 1;
+    background-color: rgba(255,255,255,.07);
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
   }
 }
 </style>

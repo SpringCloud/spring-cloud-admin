@@ -1,6 +1,6 @@
 <template>
 <div class="container pt20">
-  <header class="clear mb20">
+  <header class="clear mb15">
     <div class="l">
       <h1 class="n"><span class="mr15">服务列表</span><Button type="dashed" shape="circle" size="small" icon="md-add">添加应用</Button></h1>
       <p class="grey">我是描述我是描述我是描述我是描述我是描述</p>
@@ -26,6 +26,7 @@
       <ServItem/><ServItem/>
     </div>
   </div>
+  <AdminPage class="r" name="Services"/>
 </div>
 </template>
 

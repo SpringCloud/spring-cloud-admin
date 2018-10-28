@@ -1,6 +1,6 @@
 <template>
   <admin-panel title="状态变更">
-    <AdminEcharts height="60px" :option="throughputConfig"/>
+    <AdminEcharts height="55px" :option="throughputConfig"/>
   </admin-panel>
 </template>
 

@@ -1,22 +1,16 @@
 <template>
   <nav class="admin-nav">
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}`" exact>详情</router-link>
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/log`">日志</router-link>
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/point`">监控指数</router-link>
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/env`">环境配置</router-link>
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/logback`">日志级别</router-link>
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/jmx`">JMX</router-link>
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/jvm`">JVM</router-link>
-    <router-link class="admin-nav-i" :to="`/services/${this.$route.params.id}/swagger`">文档</router-link>
+    <router-link class="admin-nav-i" v-for="i in data" :key="i.title" :to="i.to" :exact="i.exact">{{i.title}}</router-link>
   </nav>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
+import { Component, Prop } from 'vue-property-decorator';
 
 @Component({})
 export default class Nav extends Vue {
+  @Prop({ default: () => [] }) data;
 }
 </script>
 
@@ -48,9 +42,9 @@ export default class Nav extends Vue {
   }
   &:hover, &.active{
     // color: #3880ff;
-    color: #19be6b;
+    color: #18b566;
     &:after{
-      background-color: #19be6b;
+      background-color: #18b566;
       // background-color: #3880ff;
     }
   }

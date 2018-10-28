@@ -1,5 +1,5 @@
 <template>
-<rk-panel title="Slow Trace">
+<admin-panel title="Slow Trace">
   <div class="mb15" v-for="i in stateDashboard.slowTrace" :key="i.key">
     <div>
       <span class="r sm">{{i.duration}} ms</span>
@@ -10,7 +10,7 @@
     </div>
     <RkProgress :precent="i.duration/maxDuration*100"/>
   </div>
-</rk-panel>
+</admin-panel>
 </template>
 
 <script lang="ts">

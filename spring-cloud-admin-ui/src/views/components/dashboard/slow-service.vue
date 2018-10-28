@@ -1,5 +1,5 @@
 <template>
-<rk-panel title="Slow Service">
+<admin-panel title="Slow Service">
   <div class="mb15" v-for="i in fiveData" :key="i.key">
     <div>
       <span class="r sm">{{i.value}} ms</span>
@@ -10,7 +10,7 @@
     </div>
     <RkProgress :precent="i.value/maxValue*100"/>
   </div>
-</rk-panel>
+</admin-panel>
 </template>
 
 <script lang="ts">

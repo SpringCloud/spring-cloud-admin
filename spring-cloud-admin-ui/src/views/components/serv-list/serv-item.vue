@@ -12,7 +12,7 @@
     <div class="serv-list-i-num l">
       <h1 class="num">
         <span>313</span>
-        <Icon type="md-arrow-dropup" size="14" color="#19be6b"/>
+        <Icon type="md-arrow-dropup" size="14" color="#18b566"/>
       </h1>
       <div class="sm grey">Up</div>
     </div>
@@ -58,9 +58,10 @@ export default class ServItem extends Vue {
 <style lang="scss">
 .serv-list-i{
   width: 100%;
-  padding: 20px 20px 5px;
+  padding: 15px 20px 5px;
   background: #fff;
   border: 1px solid #e4e7ed;
+  border-top: 3px solid #18b566;
   border-radius: 4px;
   margin-bottom: 15px;
   transition: box-shadow .3s;

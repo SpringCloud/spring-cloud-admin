@@ -1,7 +1,7 @@
 <template>
-  <rk-panel title="Response Time">
-    <RkEcharts height="220px" :option="responseConfig"/>
-  </rk-panel>
+  <admin-panel title="Response Time">
+    <AdminEcharts height="220px" :option="responseConfig"/>
+  </admin-panel>
 </template>
 
 <script lang="ts">

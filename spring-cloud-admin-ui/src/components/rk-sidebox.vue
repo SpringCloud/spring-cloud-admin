@@ -3,9 +3,9 @@
     <div class="rk-sidebox-backdrop" v-show="show" @click="handleHide"></div>
     <aside class="rk-sidebox" :style="show?`width:${width};right:0`:`width:${width};right:-${width}`">
       <div class="clear">
-        <h5 class="rk-sidebox-title l mr15">{{this.title}}</h5>
+        <h3 class="rk-sidebox-title l mr15">{{this.title}}</h3>
         <div class="r rk-sidebox-close" @click="handleHide">
-          <ion-icon name="close"></ion-icon>
+          <Icon type="md-close"/>
         </div>
         <div class="mb10">{{this.notice}}</div>
       </div>
@@ -52,7 +52,7 @@ export default {
   transition:right .3s;
   position: fixed;
   right: 0;
-  top: 52px;
+  top: 92px;
   bottom: 0;
   z-index: 999999999;
   padding: 25px 20px 20px;

@@ -1,7 +1,7 @@
 <template>
-  <rk-panel title="SLA">
-    <RkEcharts height="220px" :option="slaConfig"/>
-  </rk-panel>
+  <admin-panel title="SLA">
+    <AdminEcharts height="220px" :option="slaConfig"/>
+  </admin-panel>
 </template>
 
 <script lang="ts">

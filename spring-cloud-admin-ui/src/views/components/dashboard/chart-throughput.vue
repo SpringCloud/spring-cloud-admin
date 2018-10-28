@@ -1,7 +1,7 @@
 <template>
-  <rk-panel title="Throughput">
-    <RkEcharts height="220px" :option="throughputConfig"/>
-  </rk-panel>
+  <admin-panel title="Throughput">
+    <AdminEcharts height="220px" :option="throughputConfig"/>
+  </admin-panel>
 </template>
 
 <script lang="ts">

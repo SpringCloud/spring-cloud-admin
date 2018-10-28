@@ -316,7 +316,7 @@ export default {
 }
 
 .calendar-head a:hover {
-  color: #3880ff;
+  color: #18b566;
 }
 
 .calendar-head .calendar-year-select,
@@ -387,7 +387,7 @@ export default {
 
 .calendar-date:hover,
 .calendar-date-on {
-  color: #3880ff;
+  color: #18b566;
   background-color: #f8f8f8;
 }
 
@@ -396,7 +396,7 @@ export default {
   color: #fff;
   font-weight: bold;
   border-radius: 4px;
-  background: #3880ff;
+  background: #18b566;
 }
 
 .calendar-date-disabled {
@@ -423,7 +423,7 @@ export default {
 
 .calendar-hour a:hover,
 .calendar-hour a.on {
-  color: #3880ff;
+  color: #18b566;
 }
 
 .calendar-years,

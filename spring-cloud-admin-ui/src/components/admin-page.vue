@@ -1,15 +1,8 @@
 <template>
 <span class="micro-page">
-  <span class="dao-btn-group">
-    <button class="rk-page-btn mr5" @click="pre"
-    :disabled="this.current == 1">
-      <ion-icon name="arrow-dropleft"></ion-icon>
-    </button>
-    <button class="rk-page-btn" @click="next"
-    :disabled="total=== 0 || this.current == Math.ceil(this.total / this.currentSize)">
-      <ion-icon name="arrow-dropright"></ion-icon>
-    </button>
-  </span><span class="micro-page-info"><span v-if="total">{{currentPage===1?1:((currentPage-1)*currentSize+1)}} -
+    <Button class="mr5" type="success" :disabled="this.current == 1" shape="circle" icon="ios-arrow-back"  @click="pre"></Button>
+    <Button type="success"  :disabled="total=== 0 || this.current == Math.ceil(this.total / this.currentSize)" shape="circle" icon="ios-arrow-forward"  @click="next"></Button>
+    <span class="micro-page-info"><span v-if="total">{{currentPage===1?1:((currentPage-1)*currentSize+1)}} -
     {{last}}</span> Totol {{total}} {{name}}</span>
 </span>
 </template>
@@ -83,24 +76,23 @@ export default {
 }
 .micro-page-info{
   margin-left: 10px;
-  font-size: 14px;
-  line-height: 16px;
   color: #9ba3af;
+  vertical-align: middle;
 }
 .rk-page-btn{
   cursor: pointer;
   border-radius: 4px;
-  background-color: #5487ed;
+  background-color: #18b566;
   border: 0;
   color: #fff;
   outline: none;
-  padding: 5px .5em;
-  height: 23px;
+  padding: 0px .5em;
+  height: 27px;
   vertical-align: bottom;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   &:hover {
-    background-color: #6296ff;
+    background-color: #19a35e;
   }
 }
 </style>
