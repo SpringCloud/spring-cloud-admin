@@ -260,7 +260,7 @@ export default {
 }
 
 .datepicker > input.focus {
-  border-color: #3880ff;
+  border-color: #18b566;
   -webkit-box-shadow: 0 0 5px rgba(59, 180, 242, 0.3);
   box-shadow: 0 0 5px rgba(59, 180, 242, 0.3);
 }
@@ -318,7 +318,7 @@ export default {
 
 .datepicker-btn {
   padding: 5px 10px;
-  background: #3880ff;
+  background: #18b566;
   color: #fff;
   border-radius: 2px;
   display: inline-block;
@@ -350,7 +350,7 @@ export default {
 }
 
 .datepicker__buttons .datepicker__button-select {
-  background: #3880ff;
+  background: #18b566;
 }
 
 .datepicker__buttons .datepicker__button-cancel {

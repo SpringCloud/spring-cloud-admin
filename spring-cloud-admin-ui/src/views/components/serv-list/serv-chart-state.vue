@@ -1,6 +1,6 @@
 <template>
   <admin-panel title="状态变更">
-    <AdminEcharts height="60px" :option="throughputConfig"/>
+    <AdminEcharts height="55px" :option="throughputConfig"/>
   </admin-panel>
 </template>
 
@@ -17,6 +17,7 @@ export default class Heap extends Vue {
       tooltip: {
         trigger: 'axis',
       },
+      animation: false,
       grid: {
         top: 5,
         left: -10,

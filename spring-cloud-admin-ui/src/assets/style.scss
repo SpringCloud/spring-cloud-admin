@@ -5,7 +5,8 @@ html, body, #app{
   height: 100%;
 }
 body{
-  font-size: 13px;
+  min-width: 1024px;
+  font-size: 13px !important;
   // background-color: #F0F2F5;
 }
 #app {
@@ -33,9 +34,29 @@ body{
   }
 }
 .ivu-btn:hover{
-  color: #19be6b;
-  border-color: #19be6b;
+  color: #18b566;
+  border-color: #18b566;
 }
 a{
-  color: #19be6b;
+  color: inherit;
+  &:hover{
+    color: inherit;
+  }
+}
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+td,
+th {
+  border-bottom: 1px solid #e4e7ed;
+  padding: 0.8em 1.5em !important;
+  text-align: left;
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
 }

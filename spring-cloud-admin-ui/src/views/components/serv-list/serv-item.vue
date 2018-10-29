@@ -4,7 +4,7 @@
   <header class="serv-list-i-header mb10">
     <img src="http://spring.io/img/homepage/icon-spring-framework.svg" class="img mr10">
     <div>
-      <h4><span class="cp" @click="$router.push('/services/123')">SPRING-BOOT-ADMIN</span></h4>
+      <h4 class="ell"><span class="cp" @click="$router.push(`/services/${data.application.id}`)">{{data.application.name}}</span></h4>
       <p class="sm grey ell">xubin02 - Arch</p>
     </div>
   </header>
@@ -12,7 +12,7 @@
     <div class="serv-list-i-num l">
       <h1 class="num">
         <span>313</span>
-        <Icon type="md-arrow-dropup" size="14" color="#19be6b"/>
+        <Icon type="md-arrow-dropup" size="14" color="#18b566"/>
       </h1>
       <div class="sm grey">Up</div>
     </div>
@@ -44,13 +44,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
+import { Component, Prop } from 'vue-property-decorator';
 import ServChartState from './serv-chart-state.vue';
 import ServChartThread from './serv-chart-thread.vue';
 import ServChartHeap from './serv-chart-heap.vue';
 
 @Component({ components: { ServChartState, ServChartHeap, ServChartThread } })
 export default class ServItem extends Vue {
+  @Prop() data;
   show = false;
 }
 </script>
@@ -58,12 +59,19 @@ export default class ServItem extends Vue {
 <style lang="scss">
 .serv-list-i{
   width: 100%;
-  padding: 20px 20px 5px;
+  padding: 15px 20px 5px;
   background: #fff;
   border: 1px solid #e4e7ed;
+  border-top: 3px solid #18b566;
   border-radius: 4px;
   margin-bottom: 15px;
   transition: box-shadow .3s;
+  .ell{
+    max-width: 200px;
+    @media screen and (max-width: 1040px){
+      max-width: 150px;
+    }
+  }
 }
 .serv-list-i-header{
   display: flex;

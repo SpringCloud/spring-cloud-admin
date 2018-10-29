@@ -14,7 +14,7 @@ export default class AdminPanel extends Vue {
   @Prop() title: String;
   @Prop({
     type: String,
-    default: '10px 12px',
+    default: '5px 12px 10px',
   }) padding: String;
   @Prop({
     type: String,

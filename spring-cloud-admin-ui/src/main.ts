@@ -9,6 +9,7 @@ import iview from './components/iview.js';
 
 import 'iview/dist/styles/iview.css';
 import 'echarts/lib/chart/line';
+import 'echarts/lib/chart/bar';
 import 'echarts/lib/component/legend';
 import 'echarts/lib/component/tooltip';
 
