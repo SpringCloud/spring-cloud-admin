@@ -1,11 +1,11 @@
 <template>
 <div class="serv-list-i">
-  <p class="sm grey mb5">10.224.18.11:8070</p>
+  <p class="sm grey mb5">{{data.serviceUrl}}</p>
   <header class="serv-list-i-header mb10">
     <img src="http://spring.io/img/homepage/icon-spring-framework.svg" class="img mr10">
     <div>
-      <h4 class="ell"><span class="cp" @click="$router.push(`/services/${data.application.id}`)">{{data.application.name}}</span></h4>
-      <p class="sm grey ell">xubin02 - Arch</p>
+      <h4 class="ell"><span class="cp" @click="$router.push(`/services/${data.id}`)">{{data.name}}</span></h4>
+      <p class="sm grey ell">{{data.metadata.GROUP}} - {{data.metadata.VERSION}}</p>
     </div>
   </header>
   <div class="mb10 clear">

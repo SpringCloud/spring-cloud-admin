@@ -35,7 +35,7 @@ export default class ServList extends Vue {
   currentPage = 1;
   search = '';
   get filterData() {
-    return this.services.filter(i => i.application.name.toLocaleUpperCase().indexOf(this.search.toLocaleUpperCase()) !== -1);
+    return this.services.filter(i => i.name.toLocaleUpperCase().indexOf(this.search.toLocaleUpperCase()) !== -1);
   }
   get pageData() {
     const start = 8 * this.currentPage;

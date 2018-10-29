@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { State } from '@/store/modules/options.ts';
+import { State } from '@/store/modules/options';
 import { Component, Prop } from 'vue-property-decorator';
 
 @Component({

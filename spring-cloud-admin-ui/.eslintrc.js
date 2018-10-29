@@ -25,7 +25,8 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
-    'max-len': [1, 300, 2, {ignoreComments: true}],
+    'max-len': [1, 300, 2, {ignoreComments: true}], 
+    'linebreak-style': ["error", "windows"],
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',
