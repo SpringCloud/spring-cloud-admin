@@ -1,0 +1,563 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties",
+      "name": "spring.boot.admin",
+      "type": "de.codecentric.boot.admin.config.AdminServerProperties"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.DiscoveryClientConfiguration",
+      "name": "spring.boot.admin.discovery",
+      "sourceMethod": "applicationDiscoveryListener(de.codecentric.boot.admin.discovery.ServiceInstanceConverter)",
+      "type": "de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.DiscoveryClientConfiguration$EurekaConverterConfiguration",
+      "name": "spring.boot.admin.discovery.converter",
+      "sourceMethod": "serviceInstanceConverter()",
+      "type": "de.codecentric.boot.admin.discovery.EurekaServiceInstanceConverter"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.DiscoveryClientConfiguration",
+      "name": "spring.boot.admin.discovery.converter",
+      "sourceMethod": "serviceInstanceConverter()",
+      "type": "de.codecentric.boot.admin.discovery.DefaultServiceInstanceConverter"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties",
+      "name": "spring.boot.admin.monitor",
+      "sourceMethod": "getMonitor()",
+      "type": "de.codecentric.boot.admin.config.AdminServerProperties$MonitorProperties"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.NotifierConfiguration$HipchatNotifierConfiguration",
+      "name": "spring.boot.admin.notify.hipchat",
+      "sourceMethod": "hipchatNotifier()",
+      "type": "de.codecentric.boot.admin.notify.HipchatNotifier"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.NotifierConfiguration$LetsChatNotifierConfiguration",
+      "name": "spring.boot.admin.notify.letschat",
+      "sourceMethod": "letsChatNotifier()",
+      "type": "de.codecentric.boot.admin.notify.LetsChatNotifier"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.NotifierConfiguration$MailNotifierConfiguration",
+      "name": "spring.boot.admin.notify.mail",
+      "sourceMethod": "mailNotifier()",
+      "type": "de.codecentric.boot.admin.notify.MailNotifier"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.NotifierConfiguration$MicrosoftTeamsNotifierConfiguration",
+      "name": "spring.boot.admin.notify.ms-teams",
+      "sourceMethod": "microsoftTeamsNotifier()",
+      "type": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.NotifierConfiguration$OpsGenieNotifierConfiguration",
+      "name": "spring.boot.admin.notify.opsgenie",
+      "sourceMethod": "opsgenieNotifier()",
+      "type": "de.codecentric.boot.admin.notify.OpsGenieNotifier"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.NotifierConfiguration$PagerdutyNotifierConfiguration",
+      "name": "spring.boot.admin.notify.pagerduty",
+      "sourceMethod": "pagerdutyNotifier()",
+      "type": "de.codecentric.boot.admin.notify.PagerdutyNotifier"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.NotifierConfiguration$SlackNotifierConfiguration",
+      "name": "spring.boot.admin.notify.slack",
+      "sourceMethod": "slackNotifier()",
+      "type": "de.codecentric.boot.admin.notify.SlackNotifier"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties",
+      "name": "spring.boot.admin.routes",
+      "sourceMethod": "getRoutes()",
+      "type": "de.codecentric.boot.admin.config.AdminServerProperties$RoutesProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties",
+      "defaultValue": "",
+      "name": "spring.boot.admin.context-path",
+      "description": "The context-path prefixes the path where the Admin Servers statics assets and api should be\n served. Relative to the Dispatcher-Servlet.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.discovery.EurekaServiceInstanceConverter",
+      "defaultValue": "health",
+      "name": "spring.boot.admin.discovery.converter.health-endpoint-path",
+      "description": "Default path of the health-endpoint to be used for the health-url of the discovered service.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.discovery.DefaultServiceInstanceConverter",
+      "defaultValue": "health",
+      "name": "spring.boot.admin.discovery.converter.health-endpoint-path",
+      "description": "Default path of the health-endpoint to be used for the health-url of the discovered service.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.discovery.EurekaServiceInstanceConverter",
+      "defaultValue": "",
+      "name": "spring.boot.admin.discovery.converter.management-context-path",
+      "description": "Default context-path to be appended to the url of the discovered service for the\n management-url.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.discovery.DefaultServiceInstanceConverter",
+      "defaultValue": "",
+      "name": "spring.boot.admin.discovery.converter.management-context-path",
+      "description": "Default context-path to be appended to the url of the discovered service for the\n management-url.",
+      "type": "java.lang.String"
+    },
+    {
+      "defaultValue": "true",
+      "name": "spring.boot.admin.discovery.enabled",
+      "description": "Enable Spring Cloud Discovery support.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener",
+      "name": "spring.boot.admin.discovery.ignored-services",
+      "description": "Set of serviceIds to be ignored and not to be registered as application. Supports simple\n patterns (e.g. \"foo*\", \"*foo\", \"foo*bar\").",
+      "type": "java.util.Set<java.lang.String>"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.discovery.ApplicationDiscoveryListener",
+      "name": "spring.boot.admin.discovery.services",
+      "description": "Set of serviceIds that has to match to be registered as application. Supports simple\n patterns (e.g. \"foo*\", \"*foo\", \"foo*bar\"). Default value is everything",
+      "type": "java.util.Set<java.lang.String>"
+    },
+    {
+      "defaultValue": "spring-boot-admin-event-store",
+      "name": "spring.boot.admin.hazelcast.application-store",
+      "description": "Name of backing Hazelcast-List for storing the journal",
+      "type": "java.lang.String"
+    },
+    {
+      "defaultValue": "true",
+      "name": "spring.boot.admin.hazelcast.enabled",
+      "description": "Enable Hazelcast support.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties",
+      "defaultValue": [
+        ".*password$",
+        ".*secret$",
+        ".*key$",
+        ".*$token$",
+        ".*credentials.*",
+        ".*vcap_services$"
+      ],
+      "name": "spring.boot.admin.metadata-keys-to-sanitize",
+      "description": "The metadata keys which should be sanitized when serializing to json",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties$MonitorProperties",
+      "defaultValue": 2000,
+      "name": "spring.boot.admin.monitor.connect-timeout",
+      "description": "Connect timeout when querying the applications' status and info.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties$MonitorProperties",
+      "defaultValue": 10000,
+      "name": "spring.boot.admin.monitor.period",
+      "description": "Time interval in ms to update the status of applications with expired statusInfo",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties$MonitorProperties",
+      "defaultValue": 5000,
+      "name": "spring.boot.admin.monitor.read-timeout",
+      "description": "read timeout when querying the applications' status and info.",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties$MonitorProperties",
+      "defaultValue": 10000,
+      "name": "spring.boot.admin.monitor.status-lifetime",
+      "description": "Lifetime of status in ms. The status won't be updated as long the last status isn't\n expired.",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.HipchatNotifier",
+      "name": "spring.boot.admin.notify.hipchat.auth-token",
+      "description": "API token that has access to notify in the room",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.HipchatNotifier",
+      "name": "spring.boot.admin.notify.hipchat.description",
+      "description": "Trigger description. SpEL template using event as root;",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.HipchatNotifier",
+      "defaultValue": true,
+      "name": "spring.boot.admin.notify.hipchat.enabled",
+      "description": "Enables the notification.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.HipchatNotifier",
+      "defaultValue": [
+        "UNKNOWN:UP"
+      ],
+      "name": "spring.boot.admin.notify.hipchat.ignore-changes",
+      "description": "List of changes to ignore. Must be in Format OLD:NEW, for any status use * as wildcard, e.g.\n *:UP or OFFLINE:*",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.HipchatNotifier",
+      "defaultValue": false,
+      "name": "spring.boot.admin.notify.hipchat.notify",
+      "description": "TRUE will cause OS notification, FALSE will only notify to room",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.HipchatNotifier",
+      "name": "spring.boot.admin.notify.hipchat.room-id",
+      "description": "Id of the room to notify",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.HipchatNotifier",
+      "name": "spring.boot.admin.notify.hipchat.url",
+      "description": "Base URL for HipChat API (i.e. https:\/\/ACCOUNT_NAME.hipchat.com\/v2",
+      "type": "java.net.URI"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.LetsChatNotifier",
+      "defaultValue": true,
+      "name": "spring.boot.admin.notify.letschat.enabled",
+      "description": "Enables the notification.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.LetsChatNotifier",
+      "defaultValue": [
+        "UNKNOWN:UP"
+      ],
+      "name": "spring.boot.admin.notify.letschat.ignore-changes",
+      "description": "List of changes to ignore. Must be in Format OLD:NEW, for any status use * as wildcard, e.g.\n *:UP or OFFLINE:*",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.LetsChatNotifier",
+      "name": "spring.boot.admin.notify.letschat.message",
+      "description": "Message template. SpEL template using event as root",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.LetsChatNotifier",
+      "name": "spring.boot.admin.notify.letschat.room",
+      "description": "Name of the room",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.LetsChatNotifier",
+      "name": "spring.boot.admin.notify.letschat.token",
+      "description": "Token for the Let´s chat API",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.LetsChatNotifier",
+      "name": "spring.boot.admin.notify.letschat.url",
+      "description": "Host URL for Let´s Chat",
+      "type": "java.net.URI"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.LetsChatNotifier",
+      "defaultValue": "Spring Boot Admin",
+      "name": "spring.boot.admin.notify.letschat.username",
+      "description": "username which sends notification",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MailNotifier",
+      "name": "spring.boot.admin.notify.mail.cc",
+      "description": "cc-recipients of the mail",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MailNotifier",
+      "defaultValue": true,
+      "name": "spring.boot.admin.notify.mail.enabled",
+      "description": "Enables the notification.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MailNotifier",
+      "name": "spring.boot.admin.notify.mail.from",
+      "description": "sender of the change",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MailNotifier",
+      "defaultValue": [
+        "UNKNOWN:UP"
+      ],
+      "name": "spring.boot.admin.notify.mail.ignore-changes",
+      "description": "List of changes to ignore. Must be in Format OLD:NEW, for any status use * as wildcard, e.g.\n *:UP or OFFLINE:*",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MailNotifier",
+      "name": "spring.boot.admin.notify.mail.subject",
+      "description": "Mail Subject. SpEL template using event as root;",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MailNotifier",
+      "name": "spring.boot.admin.notify.mail.text",
+      "description": "Mail Text. SpEL template using event as root;",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MailNotifier",
+      "defaultValue": [
+        "root@localhost"
+      ],
+      "name": "spring.boot.admin.notify.mail.to",
+      "description": "recipients of the mail",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": "De-Registered",
+      "name": "spring.boot.admin.notify.ms-teams.de-registered-title",
+      "description": "Title of the Teams message when an app de-registers",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": "%s with id %s has de-registered from Spring Boot Admin",
+      "name": "spring.boot.admin.notify.ms-teams.deregister-activity-subtitle-pattern",
+      "description": "Message will be used as title of the Activity section of the Teams message when an app\n de-registers.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": true,
+      "name": "spring.boot.admin.notify.ms-teams.enabled",
+      "description": "Enables the notification.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": "Spring Boot Admin Notification",
+      "name": "spring.boot.admin.notify.ms-teams.message-summary",
+      "description": "Summary section of every Teams message originating from Spring Boot Admin",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": "%s with id %s has registered from Spring Boot Admin",
+      "name": "spring.boot.admin.notify.ms-teams.register-activity-subtitle-pattern",
+      "description": "Message will be used as title of the Activity section of the Teams message when an app\n registers",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": "Registered",
+      "name": "spring.boot.admin.notify.ms-teams.registered-title",
+      "description": "Title of the Teams message when an app registers",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": "%s with id %s changed status from %s to %s",
+      "name": "spring.boot.admin.notify.ms-teams.status-activity-subtitle-pattern",
+      "description": "Message will be used as title of the Activity section of the Teams message when an app\n changes status",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.MicrosoftTeamsNotifier",
+      "defaultValue": "Status Changed",
+      "name": "spring.boot.admin.notify.ms-teams.status-changed-title",
+      "description": "Title of the Teams message when an app changes status",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "name": "spring.boot.admin.notify.opsgenie.actions",
+      "description": "Comma separated list of actions that can be executed.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "name": "spring.boot.admin.notify.opsgenie.api-key",
+      "description": "Integration ApiKey",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "defaultValue": true,
+      "name": "spring.boot.admin.notify.opsgenie.enabled",
+      "description": "Enables the notification.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "name": "spring.boot.admin.notify.opsgenie.entity",
+      "description": "The entity the alert is related to.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "defaultValue": [
+        "UNKNOWN:UP"
+      ],
+      "name": "spring.boot.admin.notify.opsgenie.ignore-changes",
+      "description": "List of changes to ignore. Must be in Format OLD:NEW, for any status use * as wildcard, e.g.\n *:UP or OFFLINE:*",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "name": "spring.boot.admin.notify.opsgenie.recipients",
+      "description": "Comma separated list of users, groups, schedules or escalation names\n to calculate which users will receive the notifications of the alert.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "name": "spring.boot.admin.notify.opsgenie.source",
+      "description": "Field to specify source of alert. By default, it will be assigned to IP address of incoming request",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "name": "spring.boot.admin.notify.opsgenie.tags",
+      "description": "Comma separated list of labels attached to the alert",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.OpsGenieNotifier",
+      "name": "spring.boot.admin.notify.opsgenie.user",
+      "description": "Default owner of the execution. If user is not specified, the system becomes owner of the execution.",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.PagerdutyNotifier",
+      "name": "spring.boot.admin.notify.pagerduty.client",
+      "description": "Client for pagerduty-REST-API",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.PagerdutyNotifier",
+      "name": "spring.boot.admin.notify.pagerduty.client-url",
+      "description": "Client-url for pagerduty-REST-API",
+      "type": "java.net.URI"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.PagerdutyNotifier",
+      "name": "spring.boot.admin.notify.pagerduty.description",
+      "description": "Trigger description. SpEL template using event as root;",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.PagerdutyNotifier",
+      "defaultValue": true,
+      "name": "spring.boot.admin.notify.pagerduty.enabled",
+      "description": "Enables the notification.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.PagerdutyNotifier",
+      "defaultValue": [
+        "UNKNOWN:UP"
+      ],
+      "name": "spring.boot.admin.notify.pagerduty.ignore-changes",
+      "description": "List of changes to ignore. Must be in Format OLD:NEW, for any status use * as wildcard, e.g.\n *:UP or OFFLINE:*",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.PagerdutyNotifier",
+      "name": "spring.boot.admin.notify.pagerduty.service-key",
+      "description": "Service-Key for pagerduty-REST-API",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.PagerdutyNotifier",
+      "defaultValue": "https:\/\/events.pagerduty.com\/generic\/2010-04-15\/create_event.json",
+      "name": "spring.boot.admin.notify.pagerduty.url",
+      "description": "URI for pagerduty-REST-API",
+      "type": "java.net.URI"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.SlackNotifier",
+      "name": "spring.boot.admin.notify.slack.channel",
+      "description": "Optional channel name without # sign (i.e. somechannel)",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.SlackNotifier",
+      "defaultValue": true,
+      "name": "spring.boot.admin.notify.slack.enabled",
+      "description": "Enables the notification.",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.SlackNotifier",
+      "name": "spring.boot.admin.notify.slack.icon",
+      "description": "Optional emoji icon without colons (i.e. my-emoji)",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.SlackNotifier",
+      "defaultValue": [
+        "UNKNOWN:UP"
+      ],
+      "name": "spring.boot.admin.notify.slack.ignore-changes",
+      "description": "List of changes to ignore. Must be in Format OLD:NEW, for any status use * as wildcard, e.g.\n *:UP or OFFLINE:*",
+      "type": "java.lang.String[]"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.SlackNotifier",
+      "name": "spring.boot.admin.notify.slack.message",
+      "description": "Message formatted using Slack markups. SpEL template using event as root",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.SlackNotifier",
+      "defaultValue": "Spring Boot Admin",
+      "name": "spring.boot.admin.notify.slack.username",
+      "description": "Optional username which sends notification",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.notify.SlackNotifier",
+      "name": "spring.boot.admin.notify.slack.webhook-url",
+      "description": "Webhook url for Slack API (i.e. https:\/\/hooks.slack.com\/services\/xxx)",
+      "type": "java.net.URI"
+    },
+    {
+      "sourceType": "de.codecentric.boot.admin.config.AdminServerProperties$RoutesProperties",
+      "defaultValue": [
+        "env",
+        "metrics",
+        "trace",
+        "dump",
+        "jolokia",
+        "info",
+        "logfile",
+        "refresh",
+        "flyway",
+        "liquibase",
+        "heapdump",
+        "loggers",
+        "auditevents"
+      ],
+      "name": "spring.boot.admin.routes.endpoints",
+      "description": "Endpoints to be proxified by spring boot admin.",
+      "type": "java.lang.String[]"
+    }
+  ]
+}

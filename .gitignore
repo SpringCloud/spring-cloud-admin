@@ -1,0 +1,36 @@
+# Created by .ignore support plugin (hsz.mobi)
+target
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### BUILD ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+bin/
+doc/
+out/
+.DS_Store
+css
+/*/target
+target
+
+/spring-cloud-admin-ui/node_modules/*
+
+### VsCode ###
+.vscode

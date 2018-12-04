@@ -1,0 +1,62 @@
+div,header,footer,nav,article,section,aside,label,input,textarea,select,button,ul,ol,li,h1,h2,h3,h4,h5,a,img{
+  box-sizing: border-box;
+}
+html, body, #app{
+  height: 100%;
+}
+body{
+  min-width: 1024px;
+  font-size: 13px !important;
+  // background-color: #F0F2F5;
+}
+#app {
+  display: flex;
+}
+.container{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.wrapper{
+  flex-grow: 1;
+  overflow: auto;
+}
+.admin-table{
+  border-spacing: 0;
+  width: 100%;
+  text-align: left;
+  th{
+    padding: 8px 10px;
+    border-bottom: 1px solid #e4e7ed;
+  }
+  th, td{
+    padding: 8px 10px;
+    border-bottom: 1px solid #e4e7ed;
+  }
+}
+.ivu-btn:hover{
+  color: #18b566;
+  border-color: #18b566;
+}
+a{
+  color: inherit;
+  &:hover{
+    color: inherit;
+  }
+}
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+td,
+th {
+  border-bottom: 1px solid #e4e7ed;
+  padding: 0.8em 1.5em !important;
+  text-align: left;
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
