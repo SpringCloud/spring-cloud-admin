@@ -20,3 +20,13 @@ management:
 info.groupId: @project.groupId@
 info.artifactId: @project.artifactId@
 info.version: @project.version@
+
+
+#开启端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  security:
+    enabled: false

@@ -26,11 +26,10 @@
 	</properties>
 
    <modules>
-		<module>spring-cloud-admin-sba</module>
-		<module>spring-cloud-admin-web</module>
+	   <module>spring-cloud-admin-sba</module>
+	   <module>spring-cloud-admin-web</module>
        <module>spring-cloud-admin-client</module>
 	   <module>spring-cloud-admin-server</module>
-	   <module>spring-cloud-eureka</module>
    </modules>
 
 
